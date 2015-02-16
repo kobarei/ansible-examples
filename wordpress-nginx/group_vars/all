@@ -9,6 +9,9 @@ wp_db_password: secret
 
 # You shouldn't need to change this.
 mysql_port: 3306
+db_host: localhost
+db_login: login
+db_password: p@sswOrd
 
 # This is used for the nginx server configuration, but access to the
 # Wordpress site is not restricted by a named host.

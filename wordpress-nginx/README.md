@@ -4,6 +4,9 @@
 * sites
 * group_vars/all
 
+``db_host``
+``db_login``
+``db_password``
 ``wp_db_user``
 ``wp_db_password``
 ``server_host_name``
@@ -15,7 +18,7 @@
 
 These playbooks deploy a simple all-in-one configuration of the popular
 Wordpress blogging platform and CMS, frontend by the Nginx web server and the
-PHP-FPM process manager. To use, copy the `hosts.example` file to `hosts` and 
+PHP-FPM process manager. To use, copy the `hosts.example` file to `hosts` and
 edit the `hosts` inventory file to include the names or URLs of the servers
 you want to deploy.
 
@@ -31,7 +34,7 @@ is complete, you can hit access server to begin the Wordpress configuration.
 Here are some ideas for ways that these playbooks could be extended:
 
 - Parameterize the Wordpress deployment to handle multi-site configurations.
-- Separate the components (PHP-FPM, MySQL, Nginx) onto separate hosts and 
+- Separate the components (PHP-FPM, MySQL, Nginx) onto separate hosts and
 hande the configuration appropriately.
 - Handle Wordpress upgrades automatically.
 
