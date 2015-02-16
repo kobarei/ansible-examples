@@ -5,7 +5,6 @@
   # remote_user: user
 
   roles:
-    - common
     - mysql
     - nginx
     - php-fpm
