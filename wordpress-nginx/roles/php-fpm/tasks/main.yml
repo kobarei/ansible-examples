@@ -1,4 +1,7 @@
 ---
+- name: remove httpd24-tools
+  yum: name=httpd-tools state=absent
+
 - name: Install php-fpm and deps
   yum: name={{ item }} state=present enablerepo=epel
   with_items:
@@ -10,9 +13,9 @@
     - php55-xml
 
 - name: Disable default pool
-  command: mv /etc/php-fpm.d/www.conf /etc/php-fpm.d/www.disabled creates=/etc/php-fpm.d/www.disabled
+  command: mv /etc/php-fpm-5.5.d/www.conf /etc/php-fpm-5.5.d/www.disabled creates=/etc/php-fpm-5.5.d/www.disabled
   notify: restart php-fpm
 
 - name: Copy php-fpm configuration
-  template: src=wordpress.conf dest=/etc/php-fpm.d/
+  template: src=wordpress.conf dest=/etc/php-fpm-5.5.d/
   notify: restart php-fpm
