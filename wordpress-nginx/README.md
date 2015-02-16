@@ -1,3 +1,13 @@
+## Vars to change
+
+* hosts
+* sites
+* group_vars/all
+
+``wp_db_user``
+``wp_db_password``
+``server_host_name``
+
 ## Wordpress+Nginx+PHP-FPM Deployment
 
 - Requires Ansible 1.2 or newer
