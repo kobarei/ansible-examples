@@ -1,6 +1,6 @@
 ---
 - name: install mysql rpm
-  command: yum install -y http://dev.mysql.com/get/mysql-community-release-el6-5.noarch.rpm
+  yum: name=http://dev.mysql.com/get/mysql-community-release-el6-5.noarch.rpm state=present
 
 - name: Install Mysql package
   yum: name={{ item }} state=present
