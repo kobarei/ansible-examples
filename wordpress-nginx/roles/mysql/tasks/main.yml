@@ -10,6 +10,12 @@
    - libselinux-python
    - libsemanage-python
 
+- name: prepare building
+  yum: name={{ item }} state=present
+  with_items:
+    - python-devel
+    - gcc
+
 - name: install mysql python module (via yum)
   when: not ansible_distribution == 'Amazon'
   yum:

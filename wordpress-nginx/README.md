@@ -9,7 +9,7 @@
 ``db_password``
 ``wp_db_user``
 ``wp_db_password``
-``server_host_name``
+``server_hostname``
 
 ## Wordpress+Nginx+PHP-FPM Deployment
 
