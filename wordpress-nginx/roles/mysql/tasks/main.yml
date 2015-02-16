@@ -7,9 +7,11 @@
   with_items:
    - mysql
    - mysql-devel
-   - MySQL-python
-   # - libselinux-python
-   # - libsemanage-python
+   - libselinux-python
+   - libsemanage-python
+
+- name: Install mysql-python
+  shell: easy_install http://sourceforge.net/projects/mysql-python/files/mysql-python/1.2.3/MySQL-python-1.2.3.tar.gz/download
 
 # - name: Configure SELinux to start mysql on any port
 #   seboolean: name=mysql_connect_any state=true persistent=yes
